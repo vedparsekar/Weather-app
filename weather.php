@@ -49,15 +49,15 @@ $(document).ready(function(){
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $st="http://api.openweathermap.org/data/2.5/weather?q=".$_POST["city"]."&appid=bfeb2c9b87988f241e1b28f75ff77982"; 
+    $st="http://api.openweathermap.org/data/2.5/weather?q=".$_POST["city"]."&appid=<api>"; 
 }
 else
-$st="http://api.openweathermap.org/data/2.5/weather?q=india&appid=bfeb2c9b87988f241e1b28f75ff77982";
+$st="http://api.openweathermap.org/data/2.5/weather?q=india&appid=<api>";
 $json = file_get_contents($st);
 if($json==NULL)
 {
     echo "ERROR!!!!!!!!!!!!!!";
-    $st="http://api.openweathermap.org/data/2.5/weather?q=india&appid=bfeb2c9b87988f241e1b28f75ff77982";
+    $st="http://api.openweathermap.org/data/2.5/weather?q=india&appid=<api>";
 }
 else{
 
